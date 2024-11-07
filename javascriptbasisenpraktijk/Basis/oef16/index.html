@@ -12,7 +12,7 @@
 <body>
 
 <div class="container my-5">
-	<h1 class="text-center mb-4">Functie voor even en oneven getal</h1>
+	<h1 class="text-center mb-4">Functie klinkers vervangen</h1>
 	<!-- Terug naar home knop -->
 	<div class="text-center my-5">
 		<a href="../../index.html" class="btn btn-outline-primary btn-lg">
@@ -22,28 +22,28 @@
 	
 	<div class="card mb-4">
 		<div class="card-header bg-primary text-white">
-			Schrijf een functie <strong>isEven(getal)</strong> die controleert of een getal <strong>even</strong> is en
-			<strong>true</strong> retourneert als dat zo is, anders <strong>false</strong>.
+			Schrijf een functie vervangKlinkers(tekst) die alle klinkers in een string vervangt door het teken *.
+			– Console Test: console.log(vervangKlinkers("Hallo Wereld")); //
+			Verwachte Output: "H*ll* W*r*ld"
 		</div>
 		<div class="card-body">
 			<p>Schrijf de volgende <code>functie</code> in een JavaScript bestand.</p>
-			<pre><code class="text-warning">function</code> isEven(getal) {
-	<code class="text-warning">return</code> getal % 2 === 0;
+			<pre><code class="text-warning">function</code> vervangKlinkers(tekst) {
+	<code class="text-warning">return</code> tekst.replace(/[aeiouAEIOU]/g, '*';
 }
-<code class="text-warning">console.log</code>(isEven(6));
-<code class="text-warning">console.log</code>(isEven(7));
+<code class="text-warning">console.log</code>(vervangKlinkers("Hallo Wereld"));
 			</pre>
 			<p><strong>Uitleg</strong></p>
-			<p>De <code>functie</code> <strong>isEven</strong> is een parameter die getal accepteert. Dit is het getal dat we willen controleren.</p>
-			<p>Het return sleutelwoord gebruikt de <strong>modulusoperator (%)</strong> om de rest van de deling van
-				<strong>getal</strong> door 2 te berekenen. Als het resultaat 0 is, betekent dit dat het getal even is. De expressie getal % 2 === 0 retourneert true als het getal even is en false als dat niet zo is.
-			</p>
-			<p>Met <code>console.log</code>  testen we de functie met twee verschillende getallen.
-				<ul>
-					<li>De eerste test (isEven(6)) zou true moeten retourneren omdat 6 een even getal is.</li>
-					<li>De tweede test (isEven(7)) zou false moeten retourneren omdat 7 een oneven getal is.</li>
-				</ul>
-			</p>
+			<p>De <code>functie</code> <strong>vervangKlinkers</strong> is een parameter die tekst accepteert. Dit is de string waarin we de klinkers willen vervangen.</p>
+			<p><em><strong>Om de tekst te vervangen door * doen we het volgende</strong></em></p>
+			<ul>
+				<li><strong>tekst.replace(...)</strong>: de replace-methode wordt gebruikt om delen van de string te vervangen.</li>
+				<li><strong>/[aeiouAEIOU]/g</strong>: dit is een reguliere expressie die alle klinkers (zowel kleine als hoofdletters) zoekt.</li>
+				<li><strong>.join('')</strong>: dit voegt de elementen van de omgekeerde array weer samen tot een enkele string zonder tussenruimtes. De resulterende string is "tpircSavaJ".</li>
+			</ul>
+			
+			<p>Met <code>console.log</code> Hier testen we de functie door de string "JavaScript" aan te roepen. We verwachten dat de output "tpircSavaJ" is, wat de omgekeerde versie van de oorspronkelijke string is.</p>
+			
 			<button id="runButton" class="btn btn-primary mb-3 text-start">Run</button>
 			<div id="output" class="border p-3 rounded bg-light" style="min-height: 50px;"></div>
 		</div>
