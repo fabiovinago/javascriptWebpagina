@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="index.js" defer></script>
+</head>
+<body>
+
+<div class="container my-5">
+	<h1 class="text-center mb-4">Functie voor even en oneven getal</h1>
+	<!-- Terug naar home knop -->
+	<div class="text-center my-5">
+		<a href="../../index.html" class="btn btn-outline-primary btn-lg">
+			<i class="bi bi-house-door"></i> Terug naar Home
+		</a>
+	</div>
+	
+	<div class="card mb-4">
+		<div class="card-header bg-primary text-white">
+			Schrijf een functie <strong>isEven(getal)</strong> die controleert of een getal <strong>even</strong> is en
+			<strong>true</strong> retourneert als dat zo is, anders <strong>false</strong>.
+		</div>
+		<div class="card-body">
+			<p>Schrijf de volgende <code>functie</code> in een JavaScript bestand.</p>
+			<pre><code class="text-warning">function</code> isEven(getal) {
+	<code class="text-warning">return</code>getal % 2 === 0;
+}
+<code class="text-warning">console.log</code>(isEven(6));
+<code class="text-warning">console.log</code>(isEven(7));
+			</pre>
+			<p><strong>Uitleg</strong></p>
+			<p>De <code>functie</code> <strong>isEven</strong> is een parameter die getal accepteert. Dit is het getal dat we willen controleren.</p>
+			<p>Het return sleutelwoord gebruikt de <strong>modulusoperator (%)</strong> om de rest van de deling van
+				<strong>getal</strong> door 2 te berekenen. Als het resultaat 0 is, betekent dit dat het getal even is. De expressie getal % 2 === 0 retourneert true als het getal even is en false als dat niet zo is.
+			</p>
+			<p>Met <code>console.log</code>  testen we de functie met twee verschillende getallen.
+				<ul>
+					<li>De eerste test (isEven(6)) zou true moeten retourneren omdat 6 een even getal is.</li>
+					<li>De tweede test (isEven(7)) zou false moeten retourneren omdat 7 een oneven getal is.</li>
+				</ul>
+			</p>
+			<button id="runButton" class="btn btn-primary mb-3 text-start">Run</button>
+			<div id="output" class="border p-3 rounded bg-light" style="min-height: 50px;"></div>
+		</div>
+	</div>
+	<div class="alert alert-warning mt-4" role="alert">
+		<h4 class="alert-heading">Tip</h4>
+		<p></strong> Open de console in je browser om de uitkomst te zien. Druk op <kbd>F12</kbd> of <kbd>Ctrl + Shift + J</kbd> (Windows) of <kbd>Cmd + Option + J</kbd> (Mac) om de console te openen.</p>
+	</div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
