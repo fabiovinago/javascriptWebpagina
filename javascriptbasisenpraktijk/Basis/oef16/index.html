@@ -22,9 +22,7 @@
 	
 	<div class="card mb-4">
 		<div class="card-header bg-primary text-white">
-			Schrijf een functie vervangKlinkers(tekst) die alle klinkers in een string vervangt door het teken *.
-			– Console Test: console.log(vervangKlinkers("Hallo Wereld")); //
-			Verwachte Output: "H*ll* W*r*ld"
+			Schrijf een functie vervangKlinkers(tekst) die alle klinkers in een string vervangt door het teken *. Verwachte Output: "H*ll* W*r*ld"
 		</div>
 		<div class="card-body">
 			<p>Schrijf de volgende <code>functie</code> in een JavaScript bestand.</p>
@@ -37,12 +35,16 @@
 			<p>De <code>functie</code> <strong>vervangKlinkers</strong> is een parameter die tekst accepteert. Dit is de string waarin we de klinkers willen vervangen.</p>
 			<p><em><strong>Om de tekst te vervangen door * doen we het volgende</strong></em></p>
 			<ul>
-				<li><strong>tekst.replace(...)</strong>: de replace-methode wordt gebruikt om delen van de string te vervangen.</li>
-				<li><strong>/[aeiouAEIOU]/g</strong>: dit is een reguliere expressie die alle klinkers (zowel kleine als hoofdletters) zoekt.</li>
-				<li><strong>.join('')</strong>: dit voegt de elementen van de omgekeerde array weer samen tot een enkele string zonder tussenruimtes. De resulterende string is "tpircSavaJ".</li>
+				<li><strong>tekst.replace(...)</strong>: De replace-methode wordt gebruikt om delen van de string te vervangen.</li>
+				<li><strong>/[aeiouAEIOU]/g</strong>: Dit is een reguliere expressie die alle klinkers (zowel kleine als hoofdletters) zoekt.
+					<ul>
+						<li>a, e, i, o, u zijn de klinkers, en de hoofdletters A, E, I, O, U zijn toegevoegd om ook de hoofdletters te vervangen.</li>
+						<li>De <strong>g</strong> (global) vlag zorgt ervoor dat alle voorkomens van de klinkers in de string worden vervangen, niet alleen de eerste.</li>
+					</ul>
+				</li>
+				<li><strong>'*'-teken</strong>: Dit is het teken waarmee de klinkers worden vervangen.</li>
 			</ul>
-			
-			<p>Met <code>console.log</code> Hier testen we de functie door de string "JavaScript" aan te roepen. We verwachten dat de output "tpircSavaJ" is, wat de omgekeerde versie van de oorspronkelijke string is.</p>
+			<p>Met <code>console.log</code> testen we de functie door de string "Hallo Wereld" aan te roepen. De verwachte output is "H*ll* W*r*ld", waarbij alle klinkers zijn vervangen door *.</p>
 			
 			<button id="runButton" class="btn btn-primary mb-3 text-start">Run</button>
 			<div id="output" class="border p-3 rounded bg-light" style="min-height: 50px;"></div>

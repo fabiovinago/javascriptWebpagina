@@ -11,6 +11,6 @@ console.log(vervangKlinkers("Hallo Wereld"));
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("runButton").addEventListener("click", function () {
         const outputDiv = document.getElementById("output");
-        outputDiv.textContent = "Output: " + keerOm ("JavaScript");
+        outputDiv.textContent = "Output: " + vervangKlinkers ("Hallo Wereld");
     });
 });
